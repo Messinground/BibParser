@@ -1,7 +1,6 @@
-import urllib.request, urllib.parse, urllib.error
+import urllib.request, urllib.parse, urllib.error, json, os, re
 import xml.etree.ElementTree as ET
-import os
-import re
+
 
 Biburl = urllib.request.urlopen('https://bereanbible.com/bsb.txt')
 BibleText = str(Biburl.read()).replace('\\t','\t').split('\\n')
